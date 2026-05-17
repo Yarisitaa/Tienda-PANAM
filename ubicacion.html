@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBICACIÓN | PANAM TÉCAMAC</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <script src="https://kit.fontawesome.com/7a4c2f9f2a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav id="menu" class="menu-lateral">
+    <div class="menu-header">
+        <div class="logo-menu-container">
+            <img src="img/logo.png" alt="PANAM">
+        </div>
+        <span class="btn-cerrar" onclick="toggleMenu()">&times;</span>
+    </div>
+
+    <div class="menu-links">
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <div class="enlace-especial">
+            <a href="prodcutos.html">PRODUCTOS</a>
+            <span id="icono-plus" onclick="toggleSubmenu(event)">+</span>
+        </div>
+        <div id="submenu-productos" class="submenu-lista">
+            <a href="prodcutos.html#mujer">Mujer</a>
+            <a href="prodcutos.html#hombre">Hombre</a>
+            <a href="prodcutos.html#ninos">Niños</a>
+        </div>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="contacto.html">CONTACTO</a>
+    </div>
+</nav>
+
+<header class="header"> 
+    <div class="lado-izquierdo">
+        <div class="menu-icono" onclick="toggleMenu()">
+            ☰ <span>Menú</span>
+        </div>
+        <div class="logo-tienda">
+            <img src="img/logo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="menu-iconos">
+        <a href="index.html">
+            <div class="icono-circulo"><img src="img/icono-inicio.png" class="img-icono" alt="Inicio"></div>
+            <p>Inicio</p>
+        </a>
+        <a href="nosotros.html">
+            <div class="icono-circulo"><img src="img/icono-nosotros.png" class="img-icono" alt="Nosotros"></div>
+            <p>Nosotros</p>
+        </a>
+        <a href="prodcutos.html">
+            <div class="icono-circulo"><img src="img/icono-productos.png" class="img-icono" alt="Productos"></div>
+            <p>Productos</p>
+        </a>
+        <a href="ubicacion.html">
+            <div class="icono-circulo active-icon" style="background:#1f1c86;">
+                <img src="img/icono-ubicacion.png" class="img-icono" alt="Ubicación">
+            </div>
+            <p>Ubicación</p>
+        </a>
+        <a href="contacto.html">
+            <div class="icono-circulo"><img src="img/icono-contacto.png" class="img-icono" alt="Contacto"></div>
+            <p>Contacto</p>
+        </a>
+    </div>
+</header>
+
+<main class="main-ubicacion" style="margin-top: 120px;">
+    <section class="titulo-productos-centrado">
+        <span class="sublinea">TU PRÓXIMO PAR ESTÁ CERCA</span>
+        <h1 class="titulo-moderno">TRAZA TU <span class="resalte-azul">RUTA</span></h1>
+        <div class="linea-decorativa-centrada"></div>
+    </section>
+
+<section class="contenedor-vertical-simple" style="padding: 0 5%; max-width: 1200px; margin: 0 auto;">
+        
+    <div class="bloque-mapa-full" style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.487050965706!2d-99.03485872402283!3d19.636938733362145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f30019c3a349%3A0x44f183bb11aefe41!2sTienda%20PANAM!5e0!3m2!1ses-419!2smx!4v1713590000000!5m2!1ses-419!2smx" 
+            width="100%" 
+            height="450" 
+            style="border:0; display: block;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>   
+</section>
+
+<div class="tarjeta-info-tienda-v" style="
+    background: #1f1c86; 
+    color: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    margin: 30px auto; 
+    max-width: 850px; /* Tamaño mediano */
+    width: 95%; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+">
+    <div class="mini-titulo" style="color: #2daa4b; font-weight: bold; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Punto de Venta</div>
+    <h3 style="font-size: 26px; margin: 10px 0 25px 0; font-family: 'Arial', sans-serif;">PANAM TÉCAMAC</h3>
+    
+    <div class="info-grid-vertical" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: left;">
+        <div class="dato" style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-map-marker-alt" style="color: #2daa4b; font-size: 18px; margin-top: 3px;"></i>
+            <p style="font-size: 14px; margin: 0; line-height: 1.4;">C. Jardines de las Naciones Manzana 38, Los Heroes Tecamac, 55764 Ojo de Agua, Méx.</p>
+        </div>
+        <div class="dato" style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-clock" style="color: #2daa4b; font-size: 18px; margin-top: 3px;"></i>
+            <p style="font-size: 14px; margin: 0; line-height: 1.4;"><strong>Horario:</strong><br>10:00 AM - 9:00 PM</p>
+        </div>
+        <div class="dato" style="display: flex; align-items: flex-start; gap: 12px;">
+            <i class="fas fa-phone" style="color: #2daa4b; font-size: 18px; margin-top: 3px;"></i>
+            <p style="font-size: 14px; margin: 0; line-height: 1.4;"><strong>Teléfono:</strong><br>55 3656 2579</p>
+        </div>
+    </div>
+
+    <!-- BOTÓN DE RUTA DINÁMICA -->
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Tienda+PANAM+Jardines+de+las+Naciones+Manzana+38+Los+Heroes+Tecamac" 
+       target="_blank" 
+       class="btn" 
+       style="display: inline-block; margin-top: 30px; background: white; color: #1f1c86; font-weight: 800; padding: 12px 35px; font-size: 13px; border-radius: 50px; text-decoration: none; text-transform: uppercase; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+        <i class="fas fa-route" style="margin-right: 8px;"></i> CÓMO LLEGAR
+    </a>
+</div>
+    </section>
+
+    <section class="servicios-vanguardia" style="margin-top: 60px;">
+        <div class="contenedor-cards-dinamicas">
+            <div class="card-llamativa">
+                <div class="card-icon-wrap"><i class="fas fa-route"></i></div>
+                <div class="card-content-v">
+                    <h4>FÁCIL ACCESO</h4>
+                    <div class="linea-acento"></div>
+                    <p>Ubicados estratégicamente en <strong>Jardines de las Naciones</strong>.</p>
+                    <span class="tag-v">16 MIN APROX.</span>
+                </div>
+            </div>
+            <div class="card-llamativa">
+                <div class="card-icon-wrap"><i class="fas fa-user-shield"></i></div>
+                <div class="card-content-v">
+                    <h4>ZONA SEGURA</h4>
+                    <div class="linea-acento"></div>
+                    <p>Disfruta de una experiencia de compra relajada en <strong>Los Héroes Tecámac</strong>.</p>
+                    <span class="tag-v">ENTORNO FAMILIAR</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-vanguardia" style="background: #000; color: #fff; padding: 60px 0 20px; font-family: Arial, sans-serif;">
+    
+    <div class="footer-container" style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+        
+<div class="footer-bloque" style="flex: 1; min-width: 280px; margin-bottom: 30px;">
+    
+    <img src="img/logo.png" alt="Panam Logo" style="width: 160px; filter: brightness(0) invert(1); margin-bottom: 25px;">
+    
+    <p style="color: #ccc; font-size: 14px; line-height: 1.6; max-width: 250px; margin-bottom: 25px;">
+        Marcando el paso en Tecámac desde una perspectiva urbana y auténtica.
+    </p>
+    
+    <div style="display: flex; gap: 15px;">
+        
+        <a href="https://www.facebook.com/share/18TEUGYQqG/?mibextid=wwXIfr" target="_blank" 
+           style="text-decoration: none; width: 45px; height: 45px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #333; transition: 0.3s;">
+            <img src="img/facebook-icono.jpeg" alt="Facebook" style="width: 20px; height: 20px; object-fit: contain;">
+        </a>
+
+        <a href="https://www.instagram.com/tienda_panam?igsh=NHNoNTh0bGF1aTBz" target="_blank" 
+           style="text-decoration: none; width: 45px; height: 45px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #333; transition: 0.3s;">
+            <img src="img/instagram-icono.jpeg" alt="Instagram" style="width: 20px; height: 20px; object-fit: contain;">
+        </a>
+        
+    </div>
+</div>
+
+        <div class="footer-bloque" style="flex: 1; min-width: 150px; margin-bottom: 30px;">
+            <h4 style="color: #1f1c86; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold;">EXPLORA</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="index.html" style="color: #ccc; text-decoration: none;">Inicio</a></li>
+                <li><a href="nosotros.html" style="color: #ccc; text-decoration: none;">Nosotros</a></li>
+                <li><a href="productos.html" style="color: #ccc; text-decoration: none;">Colecciones</a></li>
+                <li><a href="ubicacion.html" style="color: #ccc; text-decoration: none;">Tienda Física</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bloque" style="flex: 1; min-width: 320px; margin-bottom: 30px;">
+            <h4 style="color: #1f1c86; letter-spacing: 2px; margin-bottom: 20px; font-weight: bold;">ÚNETE AL CLUB</h4>
+            <p style="color: #ccc; margin-bottom: 20px;">Recibe drops exclusivos y ofertas antes que nadie.</p>
+            
+            <form action="https://formspree.io/f/myknzdnb" method="POST" style="display: flex; align-items: center; max-width: 350px;">
+                <div style="background: #1a1a1a; border-radius: 50px; display: flex; width: 100%; align-items: center; padding: 4px;">
+                    <input type="email" name="email" placeholder="Tu email..." required 
+                           style="background: transparent; border: none; color: white; padding: 12px 20px; outline: none; flex: 1; font-size: 15px;">
+                    <button type="submit" style="background: #1f1c86; color: white; border: none; width: 48px; height: 48px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        OK
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 40px; padding: 30px 20px 10px; text-align: center;">
+        <p style="color: #444; font-size: 13px; margin: 0; letter-spacing: 1px;">
+            © 2026 PANAM TÉCAMAC - Proyecto de Servicio Social. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
+}
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

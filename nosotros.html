@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSOTROS | PANAM TÉCAMAC</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <script src="https://kit.fontawesome.com/7a4c2f9f2a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav id="menu" class="menu-lateral">
+    <div class="menu-header">
+        <div class="logo-menu-container">
+            <img src="img/logo.png" alt="PANAM">
+        </div>
+        <span class="btn-cerrar" onclick="toggleMenu()">&times;</span>
+    </div>
+
+    <div class="menu-links">
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <div class="enlace-especial">
+            <a href="prodcutos.html">PRODUCTOS</a>
+            <span id="icono-plus" onclick="toggleSubmenu(event)">+</span>
+        </div>
+        <div id="submenu-productos" class="submenu-lista">
+            <a href="prodcutos.html#mujer">Mujer</a>
+            <a href="prodcutos.html#hombre">Hombre</a>
+            <a href="prodcutos.html#ninos">Niños</a>
+        </div>
+        <a href="ubicacion.html">UBICACIÓN</a>
+        <a href="contacto.html">CONTACTO</a>
+    </div>
+</nav>
+
+<header class="header"> 
+    <div class="lado-izquierdo">
+        <div class="menu-icono" onclick="toggleMenu()">
+            ☰ <span>Menú</span>
+        </div>
+        <div class="logo-tienda">
+            <img src="img/logo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="menu-iconos">
+        <a href="index.html">
+            <div class="icono-circulo">
+                <img src="img/icono-inicio.png" alt="Inicio" class="img-icono">
+            </div>
+            <p>Inicio</p>
+        </a>
+        <a href="nosotros.html">
+            <div class="icono-circulo active-icon"> <img src="img/icono-nosotros.png" alt="Nosotros" class="img-icono">
+            </div>
+            <p>Nosotros</p>
+        </a>
+        <a href="prodcutos.html">
+            <div class="icono-circulo">
+                <img src="img/icono-productos.png" alt="Productos" class="img-icono">
+            </div>
+            <p>Productos</p>
+        </a>
+        <a href="ubicacion.html">
+            <div class="icono-circulo">
+                <img src="img/icono-ubicacion.png" alt="Ubicación" class="img-icono">
+            </div>
+            <p>Ubicación</p>
+        </a>
+        <a href="contacto.html">
+            <div class="icono-circulo">
+                <img src="img/icono-contacto.png" alt="Contacto" class="img-icono">
+            </div>
+            <p>Contacto</p>
+        </a>
+    </div>
+</header>
+
+<main class="contenedor-nosotros">
+    <section class="hero-nosotros">
+        <div class="reveal-text">
+            <span class="sublinea">IDENTIDAD CORPORATIVA</span>
+            <h1 class="titulo-moderno">IMPULSANDO LA <br> <span class="resalte-azul">ESENCIA PANAM</span></h1>
+        </div>
+    </section>
+
+    <section class="dedicacion-nueva">
+        <div class="overlap-container">
+            <div class="imagen-principal-wrap">
+                <img src="img/imgnosotros.jpeg" alt="PANAM Urban" class="img-flotante">
+                <div class="decoracion-cuadro"></div>
+            </div>
+            <div class="texto-overlap">
+                <h2 class="titulo-seccion-v">Nuestra Labor</h2>
+                <p>Desarrollamos e implementamos un sitio web institucional para la sucursal <strong>PANAM Tecámac</strong>. Este proyecto surge para fortalecer la comunicación directa y elevar la presencia digital de la marca.</p>
+                <p>Buscamos proyectar la identidad única de PANAM, respaldando la competitividad comercial a través de innovación visual.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mision-vision-v2">
+        <div class="mv-card">
+            <div class="mv-header"><span>01</span> Misión</div>
+            <p>Contribuir a que la sucursal PANAM Tecámac sea un referente de atención moderna e innovación digital.</p>
+        </div>
+        <div class="mv-card azul">
+            <div class="mv-header"><span>02</span> Visión</div>
+            <p>Integrar herramientas tecnológicas que respalden la identidad y competitividad en el sector.</p>
+        </div>
+    </section>
+
+    <section class="pilares-v2">
+        <div class="pilares-intro">
+            <h2>NUESTROS <br> PILARES</h2>
+            <div class="linea-vertical"></div>
+        </div>
+        
+        <div class="pilares-lista">
+            <div class="pilar-item">
+                <div class="pilar-info">
+                    <h3>Compromiso</h3>
+                    <p>Calidad y responsabilidad en cada etapa del desarrollo.</p>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <div class="pilar-info">
+                    <h3>Creatividad</h3>
+                    <p>Soluciones visuales que proyectan la esencia de la marca.</p>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <div class="pilar-info">
+                    <h3>Colaboración</h3>
+                    <p>Trabajo coordinado para resultados accesibles y útiles.</p>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <div class="pilar-info">
+                    <h3>Proactividad</h3>
+                    <p>Identificación de mejoras y propuestas de cambios efectivos.</p>
+                </div>
+            </div>
+            <div class="pilar-item">
+                <div class="pilar-info">
+                    <h3>Respeto</h3>
+                    <p>Representación fiel de la identidad y valores de PANAM.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer-vanguardia" style="background: #000; color: #fff; padding: 60px 0 20px; font-family: Arial, sans-serif;">
+    
+    <div class="footer-container" style="display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+        
+<div class="footer-bloque" style="flex: 1; min-width: 280px; margin-bottom: 30px;">
+    
+    <img src="img/logo.png" alt="Panam Logo" style="width: 160px; filter: brightness(0) invert(1); margin-bottom: 25px;">
+    
+    <p style="color: #ccc; font-size: 14px; line-height: 1.6; max-width: 250px; margin-bottom: 25px;">
+        Marcando el paso en Tecámac desde una perspectiva urbana y auténtica.
+    </p>
+    
+    <div style="display: flex; gap: 15px;">
+        
+        <a href="https://www.facebook.com/share/18TEUGYQqG/?mibextid=wwXIfr" target="_blank" 
+           style="text-decoration: none; width: 45px; height: 45px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #333; transition: 0.3s;">
+            <img src="img/facebook-icono.jpeg" alt="Facebook" style="width: 20px; height: 20px; object-fit: contain;">
+        </a>
+
+        <a href="https://www.instagram.com/tienda_panam?igsh=NHNoNTh0bGF1aTBz" target="_blank" 
+           style="text-decoration: none; width: 45px; height: 45px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid #333; transition: 0.3s;">
+            <img src="img/instagram-icono.jpeg" alt="Instagram" style="width: 20px; height: 20px; object-fit: contain;">
+        </a>
+        
+    </div>
+</div>
+
+        <div class="footer-bloque" style="flex: 1; min-width: 150px; margin-bottom: 30px;">
+            <h4 style="color: #1f1c86; letter-spacing: 2px; margin-bottom: 25px; font-weight: bold;">EXPLORA</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="index.html" style="color: #ccc; text-decoration: none;">Inicio</a></li>
+                <li><a href="nosotros.html" style="color: #ccc; text-decoration: none;">Nosotros</a></li>
+                <li><a href="productos.html" style="color: #ccc; text-decoration: none;">Colecciones</a></li>
+                <li><a href="ubicacion.html" style="color: #ccc; text-decoration: none;">Tienda Física</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bloque" style="flex: 1; min-width: 320px; margin-bottom: 30px;">
+            <h4 style="color: #1f1c86; letter-spacing: 2px; margin-bottom: 20px; font-weight: bold;">ÚNETE AL CLUB</h4>
+            <p style="color: #ccc; margin-bottom: 20px;">Recibe drops exclusivos y ofertas antes que nadie.</p>
+            
+            <form action="https://formspree.io/f/myknzdnb" method="POST" style="display: flex; align-items: center; max-width: 350px;">
+                <div style="background: #1a1a1a; border-radius: 50px; display: flex; width: 100%; align-items: center; padding: 4px;">
+                    <input type="email" name="email" placeholder="Tu email..." required 
+                           style="background: transparent; border: none; color: white; padding: 12px 20px; outline: none; flex: 1; font-size: 15px;">
+                    <button type="submit" style="background: #1f1c86; color: white; border: none; width: 48px; height: 48px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        OK
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom" style="border-top: 1px solid #222; margin-top: 40px; padding: 30px 20px 10px; text-align: center;">
+        <p style="color: #444; font-size: 13px; margin: 0; letter-spacing: 1px;">
+            © 2026 PANAM TÉCAMAC - Proyecto de Servicio Social. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("activo");
+}
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
