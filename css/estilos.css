@@ -1,0 +1,2729 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    padding-bottom:80px;
+}
+
+/* HEADER NUEVO */
+.header{
+    width:100%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 20px;
+    position:fixed;
+    top:0;
+    z-index:1000;
+}
+
+/* LADO IZQUIERDO */
+.lado-izquierdo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* MENU */
+.menu-icono{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:35px;
+    cursor:pointer;
+}
+
+.menu-icono span{
+    font-size:15px;
+}
+
+/* LOGO */
+.logo-tienda{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-tienda img{
+    width:150px;
+}
+
+.logo-tienda h1{
+    font-size:18px;
+}
+
+/* ICONOS MENU */
+.menu-iconos{
+    display:flex;
+    gap:100px;
+}
+
+.menu-iconos a{
+    text-decoration:none;
+    color:#0e0b5a;
+    text-align:center;
+}
+
+.menu-iconos i{
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    width:45px;
+    height:45px;
+    
+    border-radius:50%;
+    background:#2a35ce;
+    color:rgb(137, 158, 255);
+    
+    margin:auto;
+}
+
+.menu-iconos p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+.menu-iconos i:hover{
+    background:#1f1c86;
+    transform:scale(1.1);
+    transition:0.3s;
+}
+
+/* BUSCADOR */
+.buscador{
+    display:flex;
+    align-items:center;
+    border:2px solid #4448c5;
+    border-radius:25px;
+    padding:5px 10px;
+}
+
+.buscador input{
+    border:none;
+    outline:none;
+    padding:5px;
+}
+
+.buscador button{
+    background:#2a35ce;
+    border:none;
+    color:white;
+    border-radius:50%;
+    padding:8px;
+    cursor:pointer;
+}
+
+/* CARRUSEL */
+/* SLIDER */
+.inicio{
+    margin-top:80px;
+}
+
+.carrusel{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+}
+
+.slides{
+    width:100%;
+}
+
+.slides img{
+    width:100%;
+    height:auto; /* Para que no corte la imagen */
+    max-height:450px;
+    object-fit:contain; /* Muestra la imagen completa */
+    display:none;
+    transition:transform 0.3s ease;
+    cursor:pointer;
+}
+
+.slide.active{
+    display:block;
+}
+
+.prev, .next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.6);
+    color:white;
+    border:none;
+    padding:12px 15px;
+    font-size:22px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.carrusel:hover .prev,
+.carrusel:hover .next{
+    opacity:1;
+}
+
+.prev, .next{
+    opacity:0;
+    transition:0.3s;
+}
+
+/* LINEAS VERTICALES */
+.lineas-innovadoras {
+    padding: 80px 5%;
+    background: #fdfdfd;
+}
+
+.header-lineas {
+    margin-bottom: 50px;
+    border-left: 5px solid #1f1c86;
+    padding-left: 20px;
+}
+
+.header-lineas h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+}
+
+/* La magia del Grid Asimétrico */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+}
+
+.bento-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px; /* Bordes muy redondeados */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Mujer ocupa dos filas hacia abajo */
+.bento-item.mujer {
+    grid-row: 1 / 3;
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%); /* Un toque artístico */
+    transition: 0.6s;
+}
+
+/* Efecto de Vidrio (Glassmorphism) */
+.bento-overlay {
+    position: absolute;
+    inset: 20px; /* Margen interno */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0.9;
+    transition: 0.4s;
+}
+
+.bento-overlay span {
+    font-size: 50px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.bento-overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.bento-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    border-bottom: 2px solid #fff;
+    width: max-content;
+}
+
+/* Hover - Animación de impacto */
+.bento-item:hover {
+    transform: scale(0.98); /* Se hunde ligeramente */
+}
+
+.bento-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.bento-item:hover .bento-overlay {
+    background: rgba(31, 28, 134, 0.6); /* Se tiñe del azul PANAM */
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .bento-item.mujer {
+        grid-row: auto;
+        height: 400px;
+    }
+}
+
+/* Tarjeta Individual */
+.card-linea {
+    position: relative;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-linea img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Superposición oscura y texto */
+.info-linea {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    transition: background 0.3s ease;
+}
+
+.info-linea h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 15px;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.btn-linea {
+    background: white;
+    color: black;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0; /* Escondido al inicio */
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* --- EFECTO HOVER --- */
+.card-linea:hover img {
+    transform: scale(1.1); /* Zoom suave a la foto */
+}
+
+.card-linea:hover .info-linea {
+    background: rgba(31, 28, 134, 0.4); /* Tinte azul al pasar el mouse */
+}
+
+.card-linea:hover h3 {
+    transform: translateY(0);
+}
+
+.card-linea:hover .btn-linea {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Escondido */
+    width: 320px; /* Ancho fijo para que no ocupe toda la pantalla */
+    height: 100%;
+    background: #809df5;
+    transition: 0.4s ease;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.menu-lateral.activo {
+    left: 0; /* Aparece */
+}
+
+/* Header del menú */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo-menu-container img {
+    width: 120px; /* Tamaño controlado del logo */
+    height: auto;
+    display: block;
+}
+
+.btn-cerrar {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+}
+
+/* Enlaces */
+.menu-links a {
+    display: block;
+    padding: 18px 25px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #f0f0f0; /* Línea divisoria sutil */
+    transition: background 0.3s;
+}
+
+.menu-links a:hover {
+    background: #f9f9f9;
+}
+
+/* Estilo para Productos con el signo + */
+.enlace-especial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.enlace-especial a {
+    border-bottom: none; /* Quitamos el borde individual para que no se duplique */
+    flex-grow: 1;
+}
+
+.enlace-especial span {
+    padding-right: 25px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.menu-lateral a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    padding:18px 25px;
+    font-size:18px;
+    border-bottom:1px solid #333;
+}
+
+.menu-lateral a:hover{
+    background:#4a45c9;
+}
+
+/* cuando se activa */
+.menu-lateral.activo{
+    left:0;
+}
+
+.icono-circulo {
+    width: 65px; /* Tamaño del círculo azul */
+    height: 65px;
+    background-color: #2a35ce; /* Tu color azul */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    overflow: hidden; /* Para que nada se salga del círculo */
+    transition: all 0.3s ease;
+}
+
+.img-icono {
+    width: 35px;  /* Ajusta este tamaño para que la imagen se vea bien dentro */
+    height: 35px;
+    object-fit: contain; /* Evita que la imagen se estire feo */
+    filter: brightness(0) invert(1); /* OPCIONAL: Si tu imagen es negra, esto la vuelve BLANCA automáticamente */
+}
+
+/* Efecto al pasar el mouse */
+.menu-iconos a:hover .icono-circulo {
+    transform: translateY(-5px);
+    background-color: #1f1c86;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.inicio-info{
+text-align:center;
+padding:40px 20px;
+background:#f5f5f5;
+}
+
+.inicio-info h1{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.inicio-info p{
+max-width:600px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.botones-inicio{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.btn{
+background:#1f1c86;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.btn2{
+background:#2c5bca;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.btn:hover{
+background:#000;
+}
+
+.btn2:hover{
+background:#525dea;
+}
+
+.nosotros{
+padding:40px 20px;
+text-align:center;
+background:#f7f7f7;
+}
+
+.nosotros h2{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.nosotros p{
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+.productos-destacados {
+    padding: 100px 5%;
+    background: #fff;
+}
+
+.header-vanguardia {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.header-vanguardia h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: -2px;
+}
+
+.linea-decorativa {
+    height: 2px;
+    flex-grow: 1;
+    background: #1f1c86;
+}
+
+/* La Galería */
+.galeria-vanguardia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.item-vanguardia {
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.contenedor-imagen {
+    position: relative;
+    border-radius: 40px 0px 40px 0px; /* Forma asimétrica */
+    overflow: hidden;
+    background: #f0f0f0;
+    
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Etiqueta flotante */
+.badge-vanguardia {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1f1c86;
+    color: white;
+    padding: 8px 15px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+/* Información del producto */
+.meta-vanguardia {
+    padding-top: 25px;
+    text-align: left;
+}
+
+.meta-vanguardia h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.meta-vanguardia p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Botón estilizado */
+.btn-vanguardia {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    color: #111;
+}
+
+.btn-vanguardia::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #1f1c86;
+    transition: 0.3s;
+}
+
+/* Hover Effects */
+.item-vanguardia:hover {
+    transform: translateY(-10px);
+}
+
+.item-vanguardia:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.item-vanguardia:hover .btn-vanguardia::after {
+    width: 100%;
+}
+
+/* efecto cuando pasan el mouse */
+.producto:hover{
+transform:scale(1.05);
+}
+
+/* HERO SLIDER */
+
+.hero-slider{
+margin-top:100px;
+position:relative;
+width:100%;
+overflow:hidden;
+}
+
+.slides-container{
+display:flex;
+transition:transform 0.6s ease;
+width:100%;
+}
+
+.slide{
+min-width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:40px;
+}
+
+.hero-imagen{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-imagen img{
+width:420px;
+max-width:100%;
+border-radius:10px;
+transition:transform 0.4s;
+}
+
+.hero-imagen img:hover{
+transform:scale(1.05);
+}
+
+.slide{
+min-width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:40px;
+}
+
+/* Imagen */
+.hero-imagen img{
+width:100%;
+max-width:550px;
+height:350px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.hero-imagen{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-imagen img{
+width:100%;
+max-width:600px;
+height:auto;
+object-fit:contain; /* muestra la imagen completa */
+border-radius:10px;
+}
+
+/* Texto */
+
+.hero-texto{
+max-width:450px;
+}
+
+.hero-texto h3{
+color:#777;
+font-size:14px;
+letter-spacing:2px;
+}
+
+.hero-texto h1{
+font-size:36px;
+margin:10px 0;
+}
+
+.hero-texto p{
+color:#555;
+line-height:1.5;
+}
+
+.hero-texto button{
+margin-top:15px;
+padding:12px 25px;
+border:1px solid black;
+background:transparent;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-texto button:hover{
+background:black;
+color:white;
+}
+
+/* Controles */
+.control{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:28px;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+border-radius:50%;
+transition:0.3s;
+}
+
+.control{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+color:white;
+border:none;
+font-size:28px;
+padding:12px 16px;
+cursor:pointer;
+border-radius:50%;
+z-index:10;
+}
+
+.control:hover{
+background:black;
+}
+
+
+.prev{
+left:20px;
+}
+
+.next{
+right:20px;
+}
+
+.slide{
+display:none;
+align-items:center;
+justify-content:center;
+gap:50px;
+padding:40px;
+animation:fade 0.8s;
+}
+
+.slide.active{
+display:flex;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(0.98);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* CAROUSEL EXPANSION */
+
+.carousel-expansion{
+margin-top:120px;
+position:relative;
+height:500px;
+overflow:hidden;
+}
+
+/* fondo */
+
+.carousel-bg{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.bg{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+
+.bg.active{
+opacity:1;
+}
+
+/* texto */
+
+.carousel-content{
+position:absolute;
+left:80px;
+top:50%;
+transform:translateY(-50%);
+color:white;
+max-width:400px;
+z-index:2;
+}
+
+.carousel-content h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.carousel-content p{
+margin-bottom:20px;
+}
+
+.btn-slider{
+padding:12px 25px;
+border:none;
+background:white;
+cursor:pointer;
+}
+
+/* tarjetas */
+
+.cards{
+position:absolute;
+right:50px;
+bottom:40px;
+display:flex;
+gap:15px;
+z-index:2;
+}
+
+.card{
+width:120px;
+height:180px;
+border-radius:15px;
+overflow:hidden;
+cursor:pointer;
+opacity:0.7;
+transition:0.4s;
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card.active{
+transform:scale(1.1);
+opacity:1;
+}
+
+/* controles */
+
+.controles{
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:2;
+}
+
+.controles button{
+background:white;
+border:none;
+padding:10px 15px;
+font-size:20px;
+cursor:pointer;
+margin:5px;
+border-radius:5px;
+}
+
+/* --- ESTILOS UNIFICADOS DEL CARRUSEL EXPANDIBLE --- */
+
+.slider {
+  width: 100%;
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative; /* Para posicionar los controles */
+  background-color: #000; /* Fondo negro como en la imagen */
+  margin-top: 80px; /* Espacio para el header fixed */
+}
+
+.container {
+  display: flex;
+  width: 95%; /* Ocupa casi todo el ancho */
+  height: 90vh; /* Ocupa casi todo el alto */
+  gap: 15px; /* Espacio entre paneles */
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5; /* Tamaño reducido por defecto (miniatura) */
+  position: relative;
+  transition: all 0.7s ease-in-out; /* Transición suave de expansión */
+  overflow: hidden; /* Oculta el texto en las miniaturas */
+}
+
+/* --- EFECTO DE EXPANSIÓN (CLAVE) --- */
+.panel.active {
+  flex: 5; /* Tamaño expandido para la imagen principal */
+}
+
+/* --- CONTENIDO DE TEXTO DENTRO DEL PANEL --- */
+.panel-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  max-width: 500px;
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.3s ease-in-out 0.4s; /* Aparece con retraso al expandirse */
+  z-index: 2;
+}
+
+/* El texto solo se muestra en el panel activo */
+.panel.active .panel-content {
+  opacity: 1;
+}
+
+.panel-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.panel-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-slider {
+  padding: 12px 30px;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-slider:hover {
+  background-color: #ccc;
+}
+
+/* --- CONTROLES UNIFICADOS --- */
+.controles-carrusel {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.controles-carrusel button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  color: #000;
+}
+
+.controles-carrusel button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* El submenú empieza con altura 0 y oculto */
+.submenu-lista {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.4s ease-out; /* Animación de caída */
+}
+
+/* Clase que activaremos con JavaScript */
+.submenu-lista.abierto {
+    max-height: 200px; /* Suficiente espacio para las opciones */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Estilo para los links dentro del submenú */
+.submenu-lista a {
+    padding: 15px 40px !important; /* Más espacio a la izquierda para que se vea escalonado */
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: #555 !important;
+}
+
+/* Para que el signo + cambie cuando esté abierto */
+#icono-plus {
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.rotar-mas {
+    transform: rotate(45deg); /* El + se vuelve una X o gira */
+    color: #1f1c86; /* Color azul de tu marca */
+}
+
+.footer-vanguardia {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 80px 5% 20px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración geométrica de fondo */
+.footer-vanguardia::before {
+    content: 'PANAM';
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    font-size: 150px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 0.8fr 1.2fr;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bloque h4 {
+    color: #1f1c86; /* Tu azul característico */
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.footer-logo {
+    width: 140px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Vuelve el logo blanco */
+}
+
+.footer-bloque p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bloque ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-bloque ul li {
+    margin-bottom: 12px;
+}
+
+.footer-bloque ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-bloque ul li a:hover {
+    color: #1f1c86;
+    padding-left: 5px;
+}
+
+/* Estilo Newsletter */
+.input-grupo {
+    display: flex;
+    margin-top: 20px;
+    background: #1a1a1a;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.input-grupo input {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    outline: none;
+    flex-grow: 1;
+}
+
+.input-grupo button {
+    background: #1f1c86;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.input-grupo button:hover {
+    transform: scale(1.1);
+}
+
+/* Redes Sociales */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    color: white;
+    background: #1a1a1a;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    background: #1f1c86;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #1a1a1a;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Ajuste móvil */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Eliminamos cualquier padding-bottom que pudiera estar empujando el footer */
+    padding-bottom: 0 !important; 
+    overflow-x: hidden;
+}
+
+/* Si usas un contenedor principal, asegúrate de que ocupe el mínimo de pantalla */
+main, .contenedor-principal {
+    min-height: calc(100vh - 400px); /* Ajusta según el alto de tu footer */
+}
+
+/* PALETA DE COLORES Y VARIABLES */
+:root {
+    --azul-panam: #1f1c86;
+    --negro: #111;
+    --blanco: #ffffff;
+    --gris-fondo: #fcfcfc;
+    --gris-suave: #f8f8f8;
+    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-hover: 0 20px 40px rgba(31, 28, 134, 0.15);
+}
+
+/* RESET GENERAL */
+body { 
+    margin: 0; 
+    padding: 0; 
+    background-color: var(--gris-fondo); 
+    font-family: 'Segoe UI', Roboto, sans-serif; 
+    overflow-x: hidden;
+    color: var(--negro);
+}
+
+/* BOTÓN MENÚ FLOTANTE */
+.btn-menu-fijo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2500;
+    background: var(--azul-panam);
+    color: var(--blanco);
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.btn-menu-fijo:hover {
+    transform: scale(1.05);
+    background: var(--negro);
+}
+
+/* MENÚ LATERAL AJUSTADO */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background: var(--blanco);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3000;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.menu-lateral.activo { 
+    left: 0; 
+}
+
+/* HEADER DE LA PÁGINA */
+.header-productos {
+    padding: 140px 5% 60px;
+    text-align: center;
+    background: var(--blanco);
+    border-bottom: 1px solid #eee;
+}
+
+.header-productos h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    font-weight: 900;
+    color: var(--azul-panam);
+    margin: 0;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+/* SECCIONES DE CATEGORÍA */
+.categoria-section { 
+    padding: 60px 5%; 
+}
+
+.categoria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-left: 8px solid var(--azul-panam);
+    padding-left: 20px;
+}
+
+.categoria-header h2 { 
+    font-size: clamp(20px, 4vw, 30px); 
+    font-weight: 900; 
+    margin: 0; 
+    letter-spacing: 1px;
+}
+
+/* CARRUSEL TRACK (EL CONTENEDOR QUE SE DESLIZA) */
+.carrusel-track {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 25px 10px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.carrusel-track::-webkit-scrollbar { 
+    display: none; /* Chrome/Safari */
+}
+
+/* TARJETA DE PRODUCTO ATEMPORAL */
+.producto-card {
+    min-width: 320px;
+    background: var(--blanco);
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+    position: relative;
+}
+
+.producto-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* CONTENEDOR DE IMAGEN */
+.img-container {
+    background: var(--gris-suave);
+    border-radius: 30px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img { 
+    width: 85%; 
+    height: auto;
+    object-fit: contain;
+    transition: 0.7s cubic-bezier(0.2, 1, 0.2, 1); 
+}
+
+.producto-card:hover .img-container img {
+    transform: rotate(-12deg) scale(1.15);
+}
+
+/* ETIQUETA FLOTANTE (TAG) */
+.tag-estilo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: var(--azul-panam);
+    color: var(--blanco);
+    font-size: 11px;
+    font-weight: 900;
+    padding: 8px 18px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+/* INFO DEL PRODUCTO */
+.producto-info { 
+    padding: 30px 10px 15px; 
+}
+
+.producto-info h3 { 
+    font-size: 22px; 
+    font-weight: 800; 
+    margin: 0 0 10px; 
+    color: var(--negro);
+    letter-spacing: -0.5px;
+}
+
+.decoracion { 
+    width: 50px; 
+    height: 5px; 
+    background: var(--azul-panam); 
+    margin-bottom: 25px; 
+    border-radius: 10px;
+}
+
+/* BOTÓN DETALLE SIN PRECIO */
+.btn-detalle {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 2px solid var(--negro);
+    color: var(--negro);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.btn-detalle:hover { 
+    background: var(--negro); 
+    color: var(--blanco);
+}
+
+/* CONTROLES DE NAVEGACIÓN (FLECHAS) */
+.btn-nav {
+    background: var(--blanco);
+    border: 2px solid #eee;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.btn-nav:hover { 
+    background: var(--azul-panam); 
+    color: var(--blanco); 
+    border-color: var(--azul-panam);
+    transform: scale(1.1);
+}
+
+/* RESPONSIVO (MÓVILES) */
+@media (max-width: 768px) {
+    .header-productos { padding: 100px 5% 30px; }
+    .producto-card { min-width: 280px; }
+    .categoria-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .nav-carrusel { align-self: flex-end; }
+}
+
+/* Estilos para la sección Nosotros */
+/* Título Moderno */
+.hero-nosotros {
+    padding: 150px 0 60px;
+    text-align: center;
+}
+
+.sublinea {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #1f1c86;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.titulo-moderno {
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 0.9;
+    font-weight: 900;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.resalte-azul {
+    color: #1f1c86;
+    -webkit-text-stroke: 1px #1f1c86;
+    color: transparent;
+}
+
+/* Estilo de Misión y Visión Horizontal */
+.mision-vision-horizontal {
+    display: flex;
+    gap: 20px;
+    margin: 60px 0;
+}
+
+.caja-corporativa {
+    flex: 1;
+    background: #111;
+    color: white;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.caja-corporativa h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.caja-corporativa .num {
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.05);
+}
+
+/* Pilares/Valores */
+.grid-pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.pilar {
+    border-top: 2px solid #1f1c86;
+    padding-top: 20px;
+}
+
+.pilar strong {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    color: #1f1c86;
+}
+
+.mini-titulo {
+    font-weight: 900;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* --- SECCIÓN DEDICACIÓN (OVERLAP) --- */
+.dedicacion-nueva {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.overlap-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+}
+
+.imagen-principal-wrap {
+    flex: 1;
+    position: relative;
+}
+
+.img-flotante {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    filter: grayscale(20%);
+}
+
+.decoracion-cuadro {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 70%;
+    height: 100%;
+    background: #1f1c86;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.texto-overlap {
+    flex: 1;
+    z-index: 3;
+    background: white;
+    padding: 40px;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+    margin-left: -100px; /* Hace que el texto flote sobre la imagen */
+    border-left: 10px solid #1f1c86;
+}
+
+/* --- MISIÓN Y VISIÓN V2 --- */
+.mision-vision-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5%;
+    gap: 0; /* Sin espacio para que se peguen */
+}
+
+.mv-card {
+    padding: 60px;
+    background: #f4f4f4;
+}
+
+.mv-card.azul {
+    background: #1f1c86;
+    color: white;
+}
+
+.mv-header {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mv-header span {
+    font-size: 40px;
+    opacity: 0.3;
+}
+
+/* --- PILARES V2 (ESTILO LISTA) --- */
+.pilares-v2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 100px 5%;
+    background: #fff;
+}
+
+.pilares-intro h2 {
+    font-size: 60px;
+    line-height: 0.9;
+    font-weight: 900;
+    color: #111;
+}
+
+.linea-vertical {
+    width: 5px;
+    height: 100px;
+    background: #1f1c86;
+    margin-top: 20px;
+}
+
+.pilares-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.pilar-item {
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+    transition: 0.4s;
+}
+
+.pilar-item:hover {
+    padding-left: 30px;
+    border-bottom: 1px solid #1f1c86;
+}
+
+.pilar-item h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1f1c86;
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .overlap-container { flex-direction: column; }
+    .texto-overlap { margin-left: 0; margin-top: -50px; }
+    .mision-vision-v2, .pilares-v2 { grid-template-columns: 1fr; }
+    .pilares-intro h2 { font-size: 40px; margin-bottom: 30px;}
+}
+
+/* --- ESTILOS DE CARRUSEL DENTRO DE PRODUCTOS --- */
+.carrusel-contenedor {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.track-carrusel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+
+.track-carrusel::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+}
+
+.producto-v {
+    min-width: 320px; /* Ancho fijo para que el carrusel funcione */
+    transition: 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.controles-productos {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.controles-productos button {
+    background: #1f1c86;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controles-productos button:hover {
+    background: #111;
+    transform: scale(1.1);
+}
+
+.categoria-vanguardia.invertida .controles-productos {
+    justify-content: flex-end;
+}
+
+.main-productos {
+    background: #ffffff; /* Fondo blanco limpio */
+    padding-top: 100px;
+}
+
+/* TÍTULO CENTRADO */
+.titulo-productos-centrado {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.linea-decorativa-centrada {
+    width: 60px;
+    height: 4px;
+    background: #1f1c86;
+    margin: 20px auto;
+}
+
+/* CARRUSELES */
+.seccion-carrusel {
+    max-width: 1300px;
+    margin: 0 auto 80px;
+    padding: 0 5%;
+}
+
+.encabezado-carrusel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.encabezado-carrusel h2 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111;
+}
+
+.carrusel-track {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+}
+
+.carrusel-track::-webkit-scrollbar { display: none; }
+
+/* TARJETAS DE PRODUCTO */
+.card-p {
+    min-width: 300px;
+    transition: 0.4s;
+}
+
+.img-p {
+    background: #f8f8f8; /* Fondo gris muy tenue, no negro */
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.img-p img {
+    width: 100%;
+    transform: rotate(-15deg);
+    transition: 0.5s;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+.card-p:hover .img-p img {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.card-p h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #1f1c86;
+}
+
+/* BOTONES */
+.controles-v button {
+    background: #1f1c86;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.controles-v button:hover { background: #111; }
+
+.main-ubicacion {
+    padding-top: 100px;
+    background: #fff;
+}
+
+/* SECCIÓN OVERLAP DEL MAPA */
+.seccion-mapa-overlap {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contenedor-mapa {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.google-map-wrap {
+    flex: 2;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.info-tienda-flotante {
+    flex: 0 0 350px;
+    background: #1f1c86; /* Color azul PANAM */
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin-left: -80px; /* Hace que flote sobre el mapa */
+    z-index: 2;
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.2);
+}
+
+.info-tienda-flotante h3 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.dato-contacto {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.dato-contacto i {
+    color: #7470ec; /* Color dorado para iconos */
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.btn-como-llegar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: white;
+    color: #1f1c86;
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-como-llegar:hover {
+    background: #b4cafb;
+    transform: translateY(-5px);
+}
+
+/* SERVICIOS INFERIORES */
+.info-adicional-ubicacion {
+    padding: 80px 5%;
+    background: #f9f9f9;
+    margin-top: 100px;
+}
+
+.grid-servicios {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.servicio-card i {
+    font-size: 40px;
+    color: #1f1c86;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .contenedor-mapa { flex-direction: column; }
+    .info-tienda-flotante {
+        margin-left: 0;
+        margin-top: -50px;
+        flex: 1;
+        width: 90%;
+    }
+}
+
+/* --- DISEÑO DE TARJETAS LLAMATIVAS --- */
+.servicios-vanguardia {
+    padding: 100px 5%;
+    background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+}
+
+.contenedor-cards-dinamicas {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-llamativa {
+    background: #fff;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-llamativa:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(31, 28, 134, 0.15);
+    border-color: #1f1c86;
+}
+
+/* Icono con fondo circular */
+.card-icon-wrap {
+    background: #1f1c86;
+    color: white;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin-right: 30px;
+    box-shadow: 0 10px 20px rgba(31, 28, 134, 0.3);
+}
+
+.card-content-v h4 {
+    font-size: 22px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.linea-acento {
+    width: 40px;
+    height: 4px;
+    background: #0f9e3a; /* Dorado para que resalte */
+    margin-bottom: 15px;
+}
+
+.card-content-v p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Etiquetas flotantes */
+.tag-v {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #1f1c86;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+    .contenedor-cards-dinamicas {
+        flex-direction: column;
+    }
+    .card-llamativa {
+        padding: 30px;
+    }
+}
+
+/* Estilo específico para las tarjetas de contacto en vertical */
+.metodo-contacto-v {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.metodo-contacto-v:hover {
+    border-color: #1f1c86;
+    transform: translateY(-5px);
+}
+
+.icon-v {
+    background: #1f1c86;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+}
+
+.metodo-contacto-v h3 {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.metodo-contacto-v a, .metodo-contacto-v span {
+    font-weight: 800;
+    color: #1f1c86;
+    text-decoration: none;
+}
+
+/* Estructura de la Barra Superior */
+.header-moderno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.iconos-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-align: center;
+    text-decoration: none;
+    color: #1f1c86;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.circulo-azul {
+    background: #1f1c86; /* Color azul de tu imagen */
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Estilo del Buscador */
+.input-wrapper {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    padding-right: 25px;
+}
+
+/* Formulario y Grid */
+.grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Tarjeta de WhatsApp Estilo imagen */
+.card-azul {
+    background: white;
+    border: 2px solid #1f1c86;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.icono-whatsapp {
+    background: #1f1c86;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.numero {
+    color: #1f1c86;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+/* BARRA SUPERIOR */
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-area { display: flex; align-items: center; gap: 15px; }
+.main-logo { width: 140px; }
+.menu-hamb { font-size: 20px; cursor: pointer; }
+
+.iconos-navegacion { display: flex; gap: 25px; }
+.nav-btn { text-align: center; color: #1f1c86; cursor: pointer; }
+.circulo {
+    background: #1f1c86; /* Azul de las capturas */
+    width: 45px; height: 45px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 18px; margin: 0 auto 5px;
+}
+.nav-btn span { font-size: 11px; font-weight: bold; }
+
+.buscador-area { position: relative; }
+.buscador-area input {
+    padding: 8px 35px 8px 15px;
+    border-radius: 20px; border: 1px solid #ccc; outline: none;
+}
+.lupa { position: absolute; right: 12px; top: 10px; color: #1f1c86; }
+
+/* CUERPO DE CONTACTO */
+.seccion-contacto { padding: 50px; max-width: 1200px; margin: 0 auto; }
+.titulo-grande { font-size: 45px; font-weight: 900; margin-bottom: 40px; }
+.transparente { -webkit-text-stroke: 1px #1f1c86; color: transparent; }
+
+.grid-principal { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+
+.formulario-estilo .grupo { margin-bottom: 20px; }
+.formulario-estilo label { display: block; margin-bottom: 8px; font-weight: bold; }
+.formulario-estilo input, .formulario-estilo textarea {
+    width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;
+}
+.btn-enviar {
+    background: #eee; border: 1px solid #999; padding: 10px 20px; cursor: pointer;
+}
+
+/* TARJETA WHATSAPP */
+.tarjeta-whatsapp {
+    border: 2px solid #1f1c86; border-radius: 15px;
+    padding: 60px; text-align: center;
+}
+.circulo-ws {
+    background: #1f1c86; color: white; width: 70px; height: 70px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 35px; margin: 0 auto 20px;
+}
+.num-ws { font-size: 28px; font-weight: 900; color: #1f1c86; margin-top: 10px; }
+
+.input-contenedor-moderno {
+    position: relative;
+    background: #1a1a1a; /* Fondo oscuro del input */
+    border-radius: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    max-width: 350px;
+}
+
+.input-contenedor-moderno input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+.btn-ok-circular {
+    background: #1f1c86; /* Azul Panam */
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.btn-ok-circular:hover {
+    background: #2a35ce;
+    transform: scale(1.05);
+}
+
+/* Configuración inicial del menú lateral (oculto a la izquierda) */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Se mueve fuera de la pantalla */
+    width: 300px;
+    height: 100%;
+    background: #000; /* Fondo oscuro elegante */
+    z-index: 1000;
+    transition: all 0.4s ease; /* Efecto de deslizamiento suave */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cuando el menú está activo, entra a la pantalla */
+.menu-lateral.active {
+    left: 0;
+}
+
+/* Estilo para los enlaces del menú */
+.menu-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #222;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: #1f1c86; /* Azul Panam al pasar el mouse */
+}
+
+/* Submenú oculto por defecto */
+.submenu-lista {
+    display: none;
+    padding-left: 20px;
+    background: #111;
+}
+
+.submenu-lista.show {
+    display: block;
+}
+
+/* 1. Contenedor principal de los iconos */
+.contenedor-iconos-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaciado normal en pantallas grandes */
+    transition: all 0.3s ease; /* Para que el cambio no sea brusco */
+}
+
+@media (max-width: 1000px) {
+    /* Forzamos al contenedor a que permita que los hijos se encimen */
+    .contenedor-iconos-nav {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 0 !important; /* Quitamos cualquier espacio automático */
+        padding-left: 20px; /* Espacio para que no se corte el primero */
+    }
+
+    .nav-item {
+        position: relative !important;
+        /* El secreto: un margen derecho negativo para que el siguiente se suba */
+        margin-right: -20px !important; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none !important; /* Quita el subrayado */
+    }
+
+    .circulo-azul, .nav-item-circular {
+        width: 45px !important;
+        height: 45px !important;
+        background-color: #1f1c86 !important;
+        border-radius: 50%;
+        border: 2px solid white !important; /* Crea el efecto de recorte entre ellos */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.2); /* Sombra suave para dar profundidad */
+    }
+
+    /* Estilo del texto debajo */
+    .nav-item span, .nav-item a {
+        font-size: 10px !important;
+        font-weight: bold !important;
+        color: #1f1c86 !important;
+        text-decoration: none !important;
+        margin-top: 5px;
+        margin-left: 15px; /* Ajuste para que el texto quede centrado bajo el círculo */
+    }
+}
+
+/* Quitamos el subrayado de todos los enlaces del menú y ponemos negritas */
+.contenedor-iconos-nav a, 
+.nav-item a {
+    text-decoration: none !important; /* Quita la línea de abajo */
+    color: #1f1c86; /* Color azul para el texto */
+    font-weight: bold; /* Letras en negrita */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Evitamos que cambie de color al hacer clic */
+.contenedor-iconos-nav a:visited {
+    color: #1f1c86;
+}
+
+.circulo-azul, .nav-item-circular {
+    width: 60px; /* Tamaño base */
+    height: 60px;
+    background-color: #1f1c86 !important; /* Forzamos el azul correcto */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra el círculo respecto al texto */
+    overflow: hidden; /* Por si la imagen es muy grande */
+}
+
+/* Para que la imagen o icono dentro del círculo se vea bien */
+.circulo-azul img, 
+.circulo-azul i {
+    width: 60%; /* La imagen ocupará el 60% del círculo */
+    height: auto;
+    filter: brightness(0) invert(1); /* Si es negra, la vuelve blanca */
+}
+
+/* 1. Estilo General del Contenedor */
+.menu-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    /* Permitimos que se encimen quitando el gap */
+    gap: 0 !important; 
+}
+
+/* 2. Estilo de los Enlaces (los que contienen el círculo y el texto) */
+.menu-iconos a {
+    text-decoration: none !important; /* QUITA EL SUBRAYADO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* ESTO HACE QUE SE ENCIMEN: Ajusta el número según cuánto quieras que se pisen */
+    margin-right: -18px; 
+    transition: all 0.3s ease;
+}
+
+/* 3. Estilo de los Círculos Azules */
+.icono-circulo {
+    width: 60px; 
+    height: 60px;
+    background-color: #1f1c86; /* Azul oficial */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* EL BORDE BLANCO: Es vital para que se vea el efecto de encimado limpio */
+    border: 3px solid white; 
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* 4. Estilo de las Imágenes dentro de los círculos */
+.img-icono {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    /* Si tus imágenes son negras, esto las vuelve blancas: */
+    filter: brightness(0) invert(1);
+}
+
+/* 5. Estilo del Texto (p) */
+.menu-iconos a p {
+    margin-top: 8px;
+    color: #1f1c86; /* Color azul */
+    font-weight: bold; /* NEGRITAS */
+    font-size: 14px;
+    text-decoration: none !important;
+    /* Ajustamos el margen del texto para que se vea centrado aunque el círculo esté movido */
+    padding-left: 18px; 
+}
+
+/* --- RESPONSIVE: Cuando minimizas la pantalla --- */
+@media (max-width: 1000px) {
+    .menu-iconos a {
+        margin-right: -25px; /* Se enciman MÁS en pantallas chicas */
+    }
+
+    .icono-circulo {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .img-icono {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .menu-iconos a p {
+        font-size: 11px !important;
+    }
+}
+
+/* --- 1. ESTADO NORMAL (Pantalla Grande) --- */
+.menu-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0 !important;
+    padding: 20px;
+}
+
+.menu-iconos a {
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* En grande se enciman solo un poquito */
+    margin-right: -10px; 
+    transition: all 0.3s ease; /* Esta línea hace que el cambio de tamaño sea suave */
+}
+
+.icono-circulo {
+    width: 75px; /* Tamaño grande original */
+    height: 75px;
+    background-color: #1f1c86 !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white; 
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+}
+
+.img-icono {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.menu-iconos a p {
+    margin-top: 10px;
+    color: #1f1c86;
+    font-weight: bold; /* Negritas */
+    font-size: 16px; /* Tamaño de letra normal */
+    text-decoration: none !important;
+}
+
+/* --- 2. ESTADO PEQUEÑO (Cuando minimizas o usas celular) --- */
+@media (max-width: 1000px) {
+    .menu-iconos a {
+        /* Se enciman más para que quepan en la pantalla */
+        margin-right: -25px !important; 
+    }
+
+    .icono-circulo {
+        /* Se encogen */
+        width: 48px !important; 
+        height: 48px !important;
+        border: 2px solid white !important;
+    }
+
+    .img-icono {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .menu-iconos a p {
+        /* Letra más chiquita y pegada al círculo */
+        font-size: 11px !important;
+        padding-left: 20px; /* Ajuste para centrar el texto con el encimado */
+    }
+}
+
+/* --- 1. ESTADO NORMAL (Pantalla Grande) --- */
+.menu-iconos {
+    display: flex;
+    /* EMPUJA LOS ICONOS A LA DERECHA */
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 20px 50px; /* 50px de espacio a la derecha para que no pegue al borde */
+    
+    /* MÁS ESTRECHO */
+    max-width: 900px; 
+    margin-left: auto; /* Ayuda a que el contenedor se alinee a la derecha */
+    
+    gap: 0; 
+}
+
+.menu-iconos a {
+    text-decoration: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* Espacio reducido entre ellos */
+    margin: 0 10px; 
+    transition: all 0.4s ease;
+}
+
+.icono-circulo {
+    /* ICONOS MÁS GRANDES EN GRANDE */
+    width: 90px; 
+    height: 90px;
+    background-color: #1f1c86 !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #fff; 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.img-icono {
+    /* Ajustamos la imagen interna al nuevo tamaño */
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.menu-iconos a p {
+    margin-top: 10px;
+    color: #1f1c86;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none !important;
+}
+
+/* --- 2. ESTADO RESPONSIVE (Cuando minimizas) --- */
+@media (max-width: 1000px) {
+    .menu-iconos {
+        justify-content: center; /* En celular es mejor que se centren */
+        padding: 15px 0;
+        margin: 0 auto;
+    }
+
+    .menu-iconos a {
+        /* Se enciman como en tu imagen */
+        margin: 0 -18px !important; 
+    }
+
+    .icono-circulo {
+        /* Tamaño para móvil (se mantienen proporcionales) */
+        width: 55px !important;
+        height: 55px !important;
+        border-width: 2px !important;
+    }
+
+    .img-icono {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .menu-iconos a p {
+        font-size: 10px !important;
+        padding-left: 15px; /* Ajuste para el efecto encimado */
+    }
+}
+
+/* Esto asegura que el mapa se adapte perfectamente al bloque redondeado */
+.bloque-mapa-full iframe {
+    width: 100% !important;
+    height: 450px !important;
+    display: block;
+    border: none;
+}
+
+/* Por si acaso hay algún conflicto de altura en el contenedor */
+.bloque-mapa-full {
+    height: 450px;
+    background-color: #eee; /* Color de fondo mientras carga */
+}
